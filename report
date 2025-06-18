@@ -1,0 +1,28 @@
+# Sentiment Analysis with BERT – Report
+
+## Objective
+Fine-tune BERT to classify movie reviews as positive or negative.
+
+## Dataset
+IMDb dataset from Hugging Face. 50,000 reviews labeled positive/negative.
+
+## Method
+- Pre-trained model: `bert-base-uncased`
+- Tokenization with truncation and padding
+- Training on 5,000 samples (reduced for demonstration)
+- Trainer API from Hugging Face
+- Metrics: Accuracy, F1-Score
+
+## Issues & Debugging
+- ✅ Reduced batch size due to memory limits
+- ✅ Used smaller dataset initially for debugging
+- ✅ Adjusted learning rate and added weight decay to prevent overfitting
+
+## Results
+| Metric     | Value   |
+|------------|---------|
+| Accuracy   | 0.91    |
+| F1-Score   | 0.90    |
+
+## Conclusion
+The model achieved a high F1-score with limited training data. Improvements can be made by training on the full dataset and using mixed-precision for memory efficiency.
